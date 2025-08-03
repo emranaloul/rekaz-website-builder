@@ -1,6 +1,5 @@
 'use client';
 
-import { memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   DndContext,
@@ -20,7 +19,7 @@ import {
 import { EditableSection } from './editable-section';
 import { useBuilder } from '@/lib/builder-context';
 
-export const PreviewArea = memo(function PreviewArea() {
+export const PreviewArea = () => {
   const { state, dispatch } = useBuilder();
 
   const sensors = useSensors(
@@ -90,4 +89,4 @@ export const PreviewArea = memo(function PreviewArea() {
       </DndContext>
     </div>
   );
-});
+};
